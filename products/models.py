@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Category(models.Model):
@@ -18,3 +19,5 @@ class Products(models.Model):
         Category, 
         on_delete=models.CASCADE
     )
+    #aggiungo un'altra colonna voglio che in automatico mi crea la data di creazione 
+    creado_en = models.DateTimeField(default=timezone.now)
