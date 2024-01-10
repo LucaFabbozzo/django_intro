@@ -6,7 +6,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
 
 
-class Products(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=255)
     stock = models.IntegerField()
     score = models.FloatField()
