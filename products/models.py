@@ -20,4 +20,4 @@ class Products(models.Model):
         on_delete=models.CASCADE
     )
     #aggiungo un'altra colonna voglio che in automatico mi crea la data di creazione 
-    creado_en = models.DateTimeField(default=timezone.now)
+    create_at = models.DateTimeField(default=timezone.now)
