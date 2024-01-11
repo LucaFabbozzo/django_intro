@@ -1,0 +1,30 @@
+<h1>Products</h1>
+
+<!-- #emmet tabella thead shortcut
+#table.table>thead>tr>th*4 -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>Score</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <!-- emmet tbody shortcut
+    tbody>tr>td*4 -->
+
+    <!-- istruzione per iterare i prodotti con django template -->
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.stock}}</td>
+            <td>{{product.score}}</td>
+            <td>{{product.category}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
