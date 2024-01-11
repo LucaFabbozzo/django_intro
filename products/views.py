@@ -24,3 +24,7 @@ def index(request):
         'index.html',
         context={'products': products}
     )
+
+
+def detail(request, product_id):
+    return HttpResponse(product_id)
