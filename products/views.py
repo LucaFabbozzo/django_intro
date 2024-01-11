@@ -1,5 +1,5 @@
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.http import Http404, HttpResponse, JsonResponse
+from django.shortcuts import render, get_object_or_404
 from .models import Product
 
 
@@ -27,11 +27,10 @@ def index(request):
 
 
 def detail(request, product_id):
-    product = Product.objects.get(id=product_id)
+        product = get_object_or_404(Product, id=product_id)
 
-
-    return render(
-        request,
-        'detalle.html',
-        context={'product': product}
-    )
+        return render(
+            request,
+            'detalle.html',
+            context={'product': product}
+        )
