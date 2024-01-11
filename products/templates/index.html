@@ -1,3 +1,9 @@
+<!-- in questo modo possiamo estendere la nostra base.html -->
+{% extends 'base.html' %}
+
+
+{% block content %}
+
 <h1>Products</h1>
 
 <!-- #emmet tabella thead shortcut
@@ -28,3 +34,6 @@
         {% endfor %}
     </tbody>
 </table>
+
+{% endblock %}
+
